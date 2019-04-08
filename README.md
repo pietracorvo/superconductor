@@ -1,21 +1,21 @@
 # Superconductor
 
 **Superconductor** is a collection of matlab scripts to simulate and plot superconducting thin films within the assumptions of the Meissner model.
-You can choose between some predefined geometries for the superconducting chip (a straight strip, a pihalf turn, etc.). After choosing the boundary conditions (external filed and applied feeding current) the algorithm uses a energy minimization approach to calculate the magnetization inside the superconducting chip.
+You can choose between some predefined geometries for the superconducting chip (a straight strip, a pihalf turn, etc.). After choosing the boundary conditions (external filed and applied feeding current) the algorithm uses a energy minimization approach to calculate the magnetization matrix G for the superconducting chip.
  
 Ther are 3 major scripts executed by the main scipt **Einen_chip_iterieren.m**
 - **getinp.m**:
-input of chip source dimensions (dX,dY)
+input of chip geometry, dimensions, boundary conditions, etc.
   - input of gridpoints in x and y direction (gridpointX, gridpointY)
   - input of the matrix geometrymask (with size gridpointX x gridpointY), with entry 0 for no conductor (or hole) and entry 1 for conductor
   - input of boundary conditions whole_current and Ha
   - execution of holefinder.m to detect and classify holes
-  - execution of currents to detect borders of the chip geometry
-  - calculation of Nconst (Numerical solution of folding integral needed for Eint)
+  - execution of currents.m to detect borders of the chip geometry
+  - calculation of Nconst (Numerical solution of folding integral needed for the energy calculation)
 - **iterate_G.m**:
-  - one calculation of E at the beginning
+  - one calculation of total energy E at the beginning
   - start of the iteration loop
-  - calculation of dEneuP (energy change for variation with +dG) and dEneuN (energy change for variation with -dG) for every node
+  - calculation of dEneuP (energy change for variation in magnetisation G with +dG) and dEneuN (energy change for variation with -dG) for every node
   - search for smallest energy and apply variation
 - **plotter.m** 
 is a wrapper for plotterfunction.m which builds ready-to-publish plots of currents, fields, etc.

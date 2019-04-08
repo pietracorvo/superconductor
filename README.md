@@ -9,7 +9,7 @@ input of chip source dimensions (dX,dY)
   - input of gridpoints in x and y direction (gridpointX, gridpointY)
   - input of the matrix geometrymask (with size gridpointX x gridpointY), with entry 0 for no conductor (or hole) and entry 1 for conductor
   - input of boundary conditions whole_current and Ha
-  - executeion of holefinder.m to detect and classify holes
+  - execution of holefinder.m to detect and classify holes
   - execution of currents to detect borders of the chip geometry
   - calculation of Nconst (Numerical solution of folding integral needed for Eint)
 - **iterate_G.m**:
@@ -18,7 +18,7 @@ input of chip source dimensions (dX,dY)
   - calculation of dEneuP (energy change for variation with +dG) and dEneuN (energy change for variation with -dG) for every node
   - search for smallest energy and apply variation
 - **plotter.m** 
-is a wrapper for plotterfunction.m which build ready-to-publish plots of currents, fields, etc.
+is a wrapper for plotterfunction.m which builds ready-to-publish plots of currents, fields, etc.
 
 The 3 scripts are bulit in modular style. The script iterate_G.m (which does the time consuming energy minimization process) can always be stopped and restarted seperately.
 

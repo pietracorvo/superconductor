@@ -1,0 +1,1 @@
+clearvars -except coord coord_array currentmask G iteration geometry geometrymask Ha history holemask itpar Lambda Nconst neighbourmask E_vec time whole_current

@@ -1,5 +1,7 @@
 # Superconductor
 
+![](/videos/pihalf_current.avi)
+
 **Superconductor** is a collection of matlab scripts to simulate and plot superconducting thin films within the assumptions of the Meissner model.
 You can choose between some predefined geometries for the superconducting chip (a straight strip, a pihalf turn, etc.). After choosing the boundary conditions (external filed and applied feeding current) the algorithm uses a energy minimization approach to calculate the magnetization matrix G for the superconducting chip.
  

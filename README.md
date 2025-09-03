@@ -3,7 +3,8 @@
 ![out%02d](https://user-images.githubusercontent.com/30528134/202038704-0d2504ea-9d1f-4cc3-b0b4-6b2b454729a2.gif)
 
 **Superconductor** is a collection of matlab scripts to simulate and plot superconducting thin films within the assumptions of the Meissner model.
-You can choose between some predefined geometries for the superconducting chip (a straight strip, a pihalf turn, etc.). After choosing the boundary conditions (external filed and applied feeding current) the algorithm uses a energy minimization approach to calculate the magnetization matrix G for the superconducting chip.
+You can choose between some predefined geometries for the superconducting chip (a straight strip, a pihalf turn, etc.). After choosing the boundary conditions (external filed and applied feeding current) the algorithm uses a energy minimization approach to calculate the magnetization matrix G for the superconducting chip.  
+The computation results are document in the [paper](https://github.com/pietracorvo/superconductor/blob/master/superconductor.pdf).
  
 Ther are 3 major scripts executed by the main scipt **Einen_chip_iterieren.m**
 - **getinp.m**:
